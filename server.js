@@ -30,9 +30,27 @@ const mongoUri = 'mongodb://localhost:27017/ordering_system' || 'mongodb://127.0
 //     console.log(err.message)
 // })
 
+// const connectDB = async () => {
+//     try {
+//         const conn = await mongoose.connect(process.env.MONGO_URI)
+//         console.log(`Successfully Connected To The Database`)
+//         expiryDate()
+//     } catch (err) {
+//         console.log(err.message)
+//         process.exit(1)
+//     }
+// }
+// connectDB()
+// .then(() => {
+//     app.listen(PORT, () => {
+//         console.log(`The server is running on http://localhost:${PORT}`);
+//     })
+// })
+
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI)
+        // console.log(`Successfully Connected To The Database ${conn.connection.host}`)
         console.log(`Successfully Connected To The Database`)
         expiryDate()
     } catch (err) {
