@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    width: 100%;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.page-container{
+    height: 100%;
+    min-height: 100vh;
+    
+}
+.body-content{
+    min-height: 100vh;
+    border: 3px solid black;
+    width: 50%;
+    background-color: #f2f2f2;
+    position: relative;
+    left: 25%;
+
+}
+
+.update-account{
+    
+    text-align: center;
+    
+}
+.personal-info{
+    margin-bottom: 20px;
+   
+
+}
+.title {
+    text-align: center;
+    background-color:#07335A;
+    padding: 5px;
+    color: #fff;
+    
+    font-size: 20px;
+}
+
+.personal-info label{
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 20px;
+    width: 20%;
+    display: inline-block;
+    margin-top: 20px ;
+    margin-bottom: 10px;
+ 
+}
+.personal-info input{
+    font-size: 1rem;
+    padding: 5px 5px;
+    width: 55%;
+}
+
+.contact-info label{
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 20px;
+    width: 20%;
+    display: inline-block;
+    margin-top: 20px ;
+    margin-bottom: 10px;
+}
+.contact-info input{
+    font-size: 1rem;
+    padding: 5px 5px;
+    width: 55%;
+}
+.address{
+    margin: 20px 0;
+}
+.address label{
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 20px;
+    width: 15%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  
+    
+}
+.address select{
+    font-size: 1rem;
+    padding: 5px 5px;
+    width: 60%;
+}
+.address input{
+    font-size: 1rem;
+    padding: 5px 5px;
+    width: 60%;
+}
+.btns{
+
+    text-align: center;
+    
+}
+.btns button{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4267B2;
+    color: #f2f2f2;
+    font-size: 15px;
+    cursor: pointer;
+}
+.backbtn{
+ 
+    padding: 5px 20px;
+    border:none;
+    border-radius: 5px;
+    background-color: #e31818;
+    color: #f2f2f2;
+    font-size: 15px;
+    cursor: pointer;
+}
+@media (max-width: 1000px) {
+    .update-account h1{
+        font-size: 1rem;
+    }
+    .title{
+        font-size: 0.8rem;
+    }
+    
+    .personal-info label{
+        font-size: 0.8rem;
+       
+       display: block;
+       width: 100%;
+       margin-top: 10px;
+       margin-bottom: 0;
+       margin-left: 10px;
+    }
+    .personal-info input{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        width: 90%;
+    }
+    .contact-info label{
+        font-size: 0.8rem;
+       
+       display: block;
+       width: 100%;
+       margin-top: 10px;
+       margin-bottom: 0;
+       margin-left: 10px;
+    }
+    .contact-info input{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        width: 90%;
+    }
+    .address label{
+        font-size: 0.8rem;
+       
+       display: block;
+       width: 100%;
+       margin-top: 10px;
+       margin-bottom: 0;
+       margin-left: 10px;
+    }
+    .address input{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        width: 90%;
+        
+    }
+    .address select{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        width: 90%;
+        
+    }
+    .btns button{
+        font-size: 0.8rem;
+    }
+    .btns input{
+        font-size: 0.8rem;
+    }
+}

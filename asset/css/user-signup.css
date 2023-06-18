@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    width: 100%;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+.page-container{
+    height: 100%;
+    min-height: 100vh;
+
+}
+.body-content{
+    
+    
+    width: 50%;
+    position: absolute;
+    left: 23%;
+    height: 100%;
+    min-height: 100vh;
+    border-radius: 10px;
+
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    
+    
+   
+   
+}
+
+h2{
+    margin-bottom: 10px;
+}
+.title{
+   
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+
+.title2{
+    text-align: center;
+    color: #fff;
+    font-weight: 200;
+    font-size: 20px;
+    background: rgba(0,0,0,.5);
+    
+    padding: 5px;
+    margin: 0;
+}
+
+label{
+    width: 100px;
+    display: inline-block;
+}
+
+.personal-info{
+    width: 100%;
+    clear: both;
+   
+    
+}
+
+
+.personal-info input{
+    width: 50%;
+    clear: both;
+    margin-bottom: 1%;
+    margin-left: 20px;
+    font-size: 15px;
+    padding: 5px 5px;
+
+    border-radius: 5px;
+
+}
+
+.personal-info label{
+  
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 20%;
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+
+.address label{
+  
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 20%;
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+
+.address select{
+    width: 52%;
+    clear: both;
+    margin-bottom: 1%;
+    margin-left: 20px;
+    font-size: 1rem;
+    padding: 5px 5px;
+
+    border-radius: 5px;
+  
+   
+}
+.address input{
+    width: 50%;
+    clear: both;
+    margin-bottom: 1%;
+    margin-left: 20px;
+    font-size: 15px;
+    padding: 5px 5px;
+
+    border-radius: 5px;
+}
+
+
+
+.account-profile{
+    position: relative;
+}
+
+.account-profile-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  
+   
+    
+}
+
+.account-profile-body input{
+    width: 30%;
+    clear: both;
+    margin-bottom: 1%;
+    margin-left: 5px;
+    font-size: 1rem;
+    padding: 3px 3px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+   
+
+    
+}
+
+.account-profile-body label{
+    font-size: 17px;
+    font-weight: 700;
+    
+    margin-top: 10px;
+
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+}
+.fa-eye{
+    position: absolute;
+    top: 77%;
+    left: 86%;
+    cursor: pointer;
+    color: gray;
+}
+
+
+.createaccount-container{ 
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+.back{
+ 
+    padding: 5px 20px;
+    border:none;
+    border-radius: 5px;
+    background-color: #9b0a0a;
+    color: #f2f2f2;
+    font-size: 15px;
+    cursor: pointer;
+}
+.createacc-btn{
+    
+    padding: 5px 50px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0,0,0,.5);
+    color: #f2f2f2;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.required:before{
+    content:"*";
+    font-weight:bold;
+    color: #e31818;
+  }
+  @media (max-width: 1000px) {
+    
+    h1{
+        
+        font-size: 1.5rem;
+    }
+    .personal-info label{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        
+    }
+    .personal-info input{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        width: 87%;
+        
+       
+    }
+    .address select{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        
+    }
+    .address option{
+        font-size: 0.7rem;
+    }
+    .address input{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        width: 87%;
+       
+    }
+    .account-profile-body{
+        position: relative;
+    }
+    .account-profile-body label{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        text-align: left;
+        
+    }
+    .account-profile-body input{
+        font-size: 0.8rem;
+        margin-left: 10px;
+        width: 100%;
+        margin-top: 0;
+        
+       
+    }
+    .account-profile-body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fa-eye{
+        position: absolute;
+        top: 87%;
+        left: 100%;
+        cursor: pointer;
+        color: gray;
+    }
+   
+    .createaccount-container button{
+        font-size: 0.8rem;
+      
+    }
+    .createaccount-container input{
+        font-size: 0.8rem;
+    }
+    
+   
+    .title2{
+        font-size: 1rem;
+       
+        
+    }
+    
+    
+
+
+
+}

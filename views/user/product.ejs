@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/user-product.css">
+<%- include('include/head') %>
+    <title>Products</title>
+</head>
+    <body>
+        <!-- Main container -->
+        <div class="products-page-container">
+            <%- include('include/nav') %>
+            <!-- body -->
+            <div class="sort">
+                <form action="/user/product" method="GET">
+                    <select name="category" id="">
+                        <option value="" disabled selected>All</option>
+                        <% category.forEach(data => { %>
+                            <option value="<%- data.category %>"><%- data.category %></option>
+                        <% }) %>
+                    </select>
+                    <button class="sort-button">sort</button>
+                </form>
+            </div>
+            <!-- Body container -->
+            <div class="products-content">
+                <!-- first product -->
+                <% let counter = 1 %>
+                <% if(renderProduct != '') { %>
+                    <% renderProduct.forEach((data) => { %>
+                        <div class="products1-container">
+                            <div class="img-container">
+                                <img class="image-1" src="/<%- data.img_name %>" >
+                            </div>
+                            <div class="description-1">
+                                <ul>
+                                    <li><%- data.product_name %></li>
+                                    <li>Price: <%- data.product_price %></li>
+                                    <li>Stocks: <%- data.product_stock %></li>
+                                </ul>
+                            </div >
+                            <div class="btns1-container">
+                                <% if(data.product_stock <= 0) { %>
+                                    <a href="/user/order-summary/<%- data.id %>"><button class="buy-now-btn1" disabled>Buy Now</button></a>
+                                <% }else{ %>
+                                    <a href="/user/order-summary/<%- data.id %>"><button class="buy-now-btn1">Buy Now</button></a>
+                                <% } %>
+                                <form action="/user/product/<%- data.id %>/add-to-cart" method="POST">
+                                    <input type="number" name="quantity" value=1 hidden>
+                                    <button class="add-to-cart-btn1" id="cartBtn<%- counter %>"><i class="fa-sharp fa-solid fa-cart-plus fa-sm"></i>Add to cart</button>
+                                    <% counter++ %>
+                                </form>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% }else{ %>
+                    <p>Out of Stock</p>
+                <% } %>
+            </div> 
+            <!-- BOdy container -->
+            <div onclick="scrollToTOp()" class="to-top">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div> 
+        <!-- Main container -->
+        <%- include('include/footer') %>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(".add-to-cart-btn1").click(function () {
+          alert("Added to Cart. Go to Cart to see your added products");
+        
+        });
+
+         // Scroll to top
+         function scrollToTOp(){
+            window.scrollTo(0,0);
+        }
+      
+      </script>
+    </html>
+    
