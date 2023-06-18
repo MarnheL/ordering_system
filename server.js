@@ -32,7 +32,7 @@ const mongoUri = 'mongodb://localhost:27017/ordering_system' || 'mongodb://127.0
 
 const connectDB = async () => {
     try {
-        const conn = await mongoose.connect(mongoUri)
+        const conn = await mongoose.connect(process.env.MONGO_URI)
         console.log(`Successfully Connected To The Database`)
         expiryDate()
     } catch (err) {
