@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 mongoose.set('strictQuery', false);
 
 dotenv.config({path: 'config.env'});
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 // const PORT = 3000;
 
 const Pre_Order = require('./models/Pre_Order')
